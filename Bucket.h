@@ -16,21 +16,21 @@ public:
         delete[] buckets;
     }
 
-    void add(int bucketIndex, T element) {
-        if (bucketIndex >= 0 && bucketIndex < numBuckets) {
-            buckets[bucketIndex].append(element);
+    void add(int indiceBuckets, T element) {
+        if (indiceBuckets >= 0 && indiceBuckets < numBuckets) {
+            buckets[indiceBuckets].append(element);
         }
     }
-    LinkedList<T>& get(int bucketIndex) {
-        return buckets[bucketIndex];
+    LinkedList<T>& get(int indiceBuckets) {
+        return buckets[indiceBuckets];
     }
 
-    void clearAll() {
+    void clear() {
         for (int i = 0; i < numBuckets; i++) {
             buckets[i].clear();
         }
     }
-    void printAll() {
+    void print() {
         for (int i = 0; i < numBuckets; i++) {
             cout << "Bucket " << i << ": ";
             buckets[i].print();
