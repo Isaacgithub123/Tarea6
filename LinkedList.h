@@ -6,7 +6,7 @@ using namespace std;
 
 template <typename E>
 class LinkedList {
-private:  
+private:            
     Node<E>* head;
     Node<E>* current;
     Node<E>* tail;
